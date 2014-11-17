@@ -1,0 +1,14 @@
+<h1>Top Movies</h1>
+
+<button class="btn btn-success" ng-click="getMovies(country.code)" ng-repeat="country in countries">{{country.name}}</button>
+
+<div class="pin-layout">
+			<div ng-repeat="movie in movies">
+				<div class="thumbnail">
+					<h3 class="caption">{{movie.title}}</h3>
+					<img width="180" ng-src="{{movie.posters.detailed}}" alt="{{movie.title}}">
+					<p>{{movie.synopsis}}</p>
+					<a href="http://www.imdb.com/title/tt{{movie.alternate_ids.imdb}}" class="cBlack">View details</a>
+				</div>
+			</div>
+</div>
